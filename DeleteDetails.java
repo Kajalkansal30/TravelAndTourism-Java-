@@ -144,7 +144,7 @@ public class DeleteDetails extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		new DeleteDetails("shahrukh");
+		new DeleteDetails("");
 
 	}
 

@@ -11,7 +11,7 @@ public class UpdateCustomer extends JFrame implements ActionListener{
 	 JButton add,back;
 	 JComboBox comboid;
 	 JTextField tfnumber,tfcountry,tfaddress,tfphone,tfemail,tfid,tfgender;
-	 
+	 String username;
 	 UpdateCustomer(String username){
 		setBounds(365,160,850,550);
 		setLayout(null);
@@ -117,7 +117,7 @@ public class UpdateCustomer extends JFrame implements ActionListener{
 		
 		try {
 			Conn c= new Conn();
-			ResultSet rs= c.s.executeQuery("select* from customer where usernmae= '"+ username+"'");
+			ResultSet rs= c.s.executeQuery("select * from customer where username= '"+ username+"'");
 			while(rs.next()) {
 				labelusername.setText(rs.getString("username"));
 				labelname.setText(rs.getString("name"));
@@ -164,7 +164,7 @@ public class UpdateCustomer extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		new UpdateCustomer("shahrukh");
+		new UpdateCustomer("");
 
 	}
 

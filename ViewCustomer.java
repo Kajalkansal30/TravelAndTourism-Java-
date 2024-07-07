@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class ViewCustomer extends JFrame implements ActionListener{
 	JButton back;
+	String username;
 	ViewCustomer(String username){
 		setBounds(365,160,870,550);
 		getContentPane().setBackground(Color.WHITE);
@@ -94,14 +95,14 @@ public class ViewCustomer extends JFrame implements ActionListener{
 		Image i2= i1.getImage().getScaledInstance(600, 200, Image.SCALE_DEFAULT);
 		ImageIcon i3 = new ImageIcon(i2);
 		JLabel image = new JLabel(i3);
-		image.setBounds(350, 350, 450, 175);
+		image.setBounds(10, 350, 600, 200);
 		add(image);
 		
 		ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icons/viewall.jpg"));
 		Image i5= i4.getImage().getScaledInstance(600, 200, Image.SCALE_DEFAULT);
 		ImageIcon i6 = new ImageIcon(i5);
 		JLabel image2 = new JLabel(i3);
-		image2.setBounds(0,350,370,175);
+		image2.setBounds(615,350,600,200);
 		add(image2);
 		
 		try {
@@ -131,7 +132,7 @@ public class ViewCustomer extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		new ViewCustomer("shahrukh");
+		new ViewCustomer("");
 
 	}
 

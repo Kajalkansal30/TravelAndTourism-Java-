@@ -108,7 +108,7 @@ public class Signup extends JFrame implements ActionListener{
 			String question = security.getSelectedItem();
 			String answer= tfanswer.getText();
 			
-			String query="insert into account values('"+username+"'.'"+name+"','\"+password+\"','\"+question+\"','\"+answer+\"')";
+			String query="insert into account values('"+username+"','"+name+"','"+password+"','"+question+"','"+answer+"');";
 			try {
 				Conn c= new Conn();
 				c.s.executeUpdate(query);

@@ -87,7 +87,7 @@ public class BookHotel extends JFrame implements ActionListener{
 		cfood =new Choice();
 		cfood.add("Yes");
 		cfood.add("No");
-		cfood.setBounds(250,230,200,20);
+		cfood.setBounds(250,270,200,20);
 		add(cfood);
 		
 		JLabel lblid = new JLabel("Id");

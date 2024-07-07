@@ -11,7 +11,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 	 JRadioButton rmale,rfemale;
 	 JButton add,back;
 	 JTextField tfnumber,tfcountry,tfaddress,tfphone,tfemail;
-	 
+	 String username;
 	AddCustomer(String username){
 		setBounds(365,160,850,550);
 		setLayout(null);
@@ -123,7 +123,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 		
 		try {
 			Conn c= new Conn();
-			ResultSet rs= c.s.executeQuery("select* from account where usernmae= '"+username+"' ");
+			ResultSet rs= c.s.executeQuery("select * from account where username='"+username+"'; ");
 			while(rs.next()) {
 				labelusername.setText(rs.getString("username"));
 				labelname.setText(rs.getString("name"));
@@ -154,7 +154,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 			
 			try {
 				Conn c=new Conn();
-				String query= "insert into customer values('"+username+"','"+id+"','"+number+"','"+name+"','"+gender+"','"+country+"','"+address+"',"+email+"')";
+				String query= "insert into customer values('"+username+"','"+id+"','"+number+"','"+name+"','"+gender+"','"+country+"','"+address+"','"+phone+"','"+email+"');";
 				c.s.executeUpdate(query);
 				setVisible(false);
 				JOptionPane.showMessageDialog(null, "Customer Details Added Successfully");
@@ -168,7 +168,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		new AddCustomer("Shahrukh");
+		new AddCustomer("");
 
 	}
 

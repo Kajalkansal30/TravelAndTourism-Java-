@@ -8,7 +8,7 @@ public class Dashboard extends JFrame implements ActionListener{
 	
 	String username;
 	JButton addPersonalDetails,viewPersonalDetails,updatePersonalDetails,checkpackages;
-	JButton bookpackages,viewpackaage,viewhotels,destinations,payment,bookhotels;
+	JButton bookpackages,viewpackaage,viewhotels,destinations,payment,bookhotels,deletePersonalDetails;
 	JButton viewbookhotels,calculator,notepad,about;
 	Dashboard(String username){
 		this.username=username;
@@ -55,6 +55,7 @@ public class Dashboard extends JFrame implements ActionListener{
 		updatePersonalDetails.setForeground(Color.WHITE);
 		updatePersonalDetails.setFont(new Font("Tahoma",Font.PLAIN,20));
 		updatePersonalDetails.setMargin(new Insets(0,0,0,30));
+		updatePersonalDetails.addActionListener(this);
 		p2.add(updatePersonalDetails);
 		
 		viewPersonalDetails = new JButton("View Details");
@@ -66,12 +67,13 @@ public class Dashboard extends JFrame implements ActionListener{
 		viewPersonalDetails.addActionListener(this);
 		p2.add(viewPersonalDetails);
 		
-		JButton deletePersonalDetails = new JButton("Delete Personal Details");
+	    deletePersonalDetails = new JButton("Delete Personal Details");
 		deletePersonalDetails.setBounds(0,150,300,50);
 		deletePersonalDetails.setBackground(new Color(0,0,102));
 		deletePersonalDetails.setForeground(Color.WHITE);
 		deletePersonalDetails.setFont(new Font("Tahoma",Font.PLAIN,20));
 		deletePersonalDetails.setMargin(new Insets(0,0,0,40));
+		deletePersonalDetails.addActionListener(this);
 		p2.add(deletePersonalDetails);
 		
 		checkpackages = new JButton("Check Package");
@@ -225,6 +227,8 @@ public class Dashboard extends JFrame implements ActionListener{
 			}
 		}else if(ae.getSource()==about) {
 			new About();
+		}else if(ae.getSource()==deletePersonalDetails) {
+			new DeleteDetails(username);
 		}
 	}
 

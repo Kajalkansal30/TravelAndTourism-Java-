@@ -162,7 +162,7 @@ public class BookPackage extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		new BookPackage("shahrukh");
+		new BookPackage("");
 	
 
 	}

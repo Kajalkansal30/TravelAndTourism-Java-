@@ -50,7 +50,7 @@ public class Loading extends JFrame implements Runnable{
 		loading.setFont(new Font("Raleway",Font.BOLD,16));
 		add(loading);
 		
-		JLabel lblusername = new JLabel("Welcome"+ username);
+		JLabel lblusername = new JLabel("Welcome "+ username);
 		lblusername.setBounds(20, 310, 400, 40);
 		lblusername.setForeground(Color.RED);
 		lblusername.setFont(new Font("Raleway",Font.BOLD,16));

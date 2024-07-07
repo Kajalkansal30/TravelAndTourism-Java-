@@ -55,7 +55,7 @@ public class Login extends JFrame implements ActionListener{
 		tfpassword.setBorder(BorderFactory.createEmptyBorder());
 		p2.add(tfpassword);
 		
-		JButton login= new JButton("Login");
+	    login= new JButton("Login");
 		login.setBounds(60, 200, 130, 30);
 		login.setBackground(new Color(133,193,233));
 		login.setForeground(Color.WHITE);
@@ -63,7 +63,7 @@ public class Login extends JFrame implements ActionListener{
 		login.addActionListener(this);
 		p2.add(login);
 		
-		JButton signUp = new JButton("Signup");
+	    signUp = new JButton("Signup");
 		signUp.setBounds(230, 200, 130, 30);
 		signUp.setBackground(new Color(133,193,233));
 		signUp.setForeground(Color.WHITE);
@@ -71,7 +71,7 @@ public class Login extends JFrame implements ActionListener{
 		signUp.addActionListener(this);
 		p2.add(signUp);
 		
-		JButton password = new JButton("Forget Password");
+	    password = new JButton("Forget Password");
 		password.setBounds(130, 250, 130, 30);
 		password.setBackground(new Color(133,193,233));
 		password.setForeground(Color.WHITE);
@@ -87,7 +87,13 @@ public class Login extends JFrame implements ActionListener{
 				
 		setVisible(true);
 	}
-	public void setPerformed(ActionEvent ae) {
+	
+
+	public static void main(String[] args) {
+		new Login();
+	}
+	@Override
+	public void actionPerformed(ActionEvent ae) {
 		if(ae.getSource()==login) {
 			try {
 				String username=tfusername.getText();
@@ -107,19 +113,11 @@ public class Login extends JFrame implements ActionListener{
 		}else if(ae.getSource()==signUp) {
 			setVisible(false); 
 			new Signup();
-		}else {
+		}
+		else if(ae.getSource()==password) {
 			setVisible(false); 
 			new ForgetPassword();
-		}
-	}
-
-	public static void main(String[] args) {
-		new Login();
-	}
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		}		
 	}
 
 }
