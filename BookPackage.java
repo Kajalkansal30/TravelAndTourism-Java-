@@ -79,7 +79,7 @@ public class BookPackage extends JFrame implements ActionListener{
 		labelphone.setBounds(250, 270, 200, 25);
 		add(labelphone);
 		
-		JLabel lbltotal = new JLabel("Gender");
+		JLabel lbltotal = new JLabel("Price");
 		lbltotal.setFont(new Font("Tahoma",Font.PLAIN,16));
 		lbltotal.setBounds(40, 310, 150, 25);
 		add(lbltotal);
