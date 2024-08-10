@@ -150,7 +150,7 @@ public class UpdateCustomer extends JFrame implements ActionListener{
 			
 			try {
 				Conn c=new Conn();
-				String query= "update into customer set username='"+username+"',id = '"+id+"',number= '"+number+"',name= '"+name+"',gender= '"+gender+"',country= '"+country+"',address= '"+address+"',email= "+email+"'";
+				String query= "update customer set username='"+username+"',id = '"+id+"',number= '"+number+"',name= '"+name+"',gender= '"+gender+"',country= '"+country+"',address= '"+address+"',email= '"+email+"';";
 				c.s.executeUpdate(query);
 				setVisible(false);
 				JOptionPane.showMessageDialog(null, "Customer Details Added Successfully");

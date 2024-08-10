@@ -74,7 +74,7 @@ public class Destinations extends JFrame implements Runnable {
     Thread t1;
     JLabel[] label = new JLabel[10];
     Destinations() {       
-    	setBounds(340, 200, 970, 560);        
+    	setBounds(340, 170, 970, 560);        
         ImageIcon[] image = new ImageIcon[10];
         Image[] jimage = new Image[10];        
         ImageIcon[] kimage = new ImageIcon[10];
